@@ -67,6 +67,7 @@ nav {
   letter-spacing: .08em; text-transform: uppercase;
   color: var(--text); text-decoration: none;
   display: flex; align-items: center; gap: .6rem;
+  white-space: nowrap;
 }
 .logo-dot {
   width: 8px; height: 8px; border-radius: 50%;
@@ -135,6 +136,9 @@ h1 {
   font-weight: 700; line-height: .98;
   letter-spacing: -.025em;
   margin-bottom: 1.8rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 h1 em { font-style: normal; color: var(--pink); }
 h1 .outline { -webkit-text-stroke: 1px rgba(232,230,240,.28); color: transparent; }
@@ -300,17 +304,161 @@ footer {
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
 .reveal.in { opacity: 1; transform: translateY(0); }
 
-/* Responsive */
-@media (max-width: 800px) {
+/* ====== RESPONSIVE ====== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  nav { padding: 1.1rem 2rem; }
+  .page { padding: 7rem 2rem 4rem; }
+  footer { padding: 2.5rem 2rem 2rem; }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  /* Disable cursor & hover effects */
   body { cursor: auto; }
-  #cursor { display: none; }
-  nav { padding: 1rem 1.4rem; }
-  .nav-links { gap: 1rem; }
+  #cursor { display: none !important; }
+
+  /* NAV: compact, hide secondary links, keep logo + TG button */
+  nav {
+    padding: .9rem 1.1rem;
+  }
+  .logo { font-size: .95rem; gap: .5rem; }
+  .nav-links { gap: .6rem; }
   .nav-links a:not(.nav-tg) { display: none; }
-  .page { padding: 6.5rem 1.4rem 3rem; }
-  .doc-section { padding: 1.7rem 1.4rem; }
-  footer { padding: 2rem 1.4rem; }
-  .cards { grid-template-columns: 1fr; }
-  .tg-corner { right: 1rem; bottom: 1rem; }
-  .tg-corner a { font-size: .65rem; padding: .45rem .75rem; }
+  .nav-tg {
+    padding: .45rem 1rem !important;
+    font-size: .7rem !important;
+  }
+
+  /* PAGE: tighter padding, leave room at bottom for floating TG */
+  .page {
+    padding: 5.5rem 1.1rem 7rem;
+  }
+
+  /* Background: dimmer blobs on mobile so text stays readable */
+  .blob { filter: blur(80px); opacity: .7; }
+  .b1 { width: 280px; height: 280px; }
+  .b2 { width: 240px; height: 240px; }
+  .b3 { width: 200px; height: 200px; }
+  .grid-bg { background-size: 40px 40px; }
+
+  /* Typography: smaller h1, tighter line-height */
+  h1 {
+    font-size: clamp(1.6rem, 6.5vw, 2.2rem);
+    line-height: 1.08;
+    margin-bottom: 1.3rem;
+    letter-spacing: -.015em;
+  }
+  /* На мобиле br в h1 не нужны — пусть текст переносится сам */
+  h1 br { display: none; }
+  .crumb { font-size: .62rem; letter-spacing: .15em; margin-bottom: 1rem; }
+  .lead {
+    font-size: .95rem;
+    line-height: 1.65;
+    margin-bottom: 1.6rem;
+  }
+
+  /* Meta row: stack vertically on tiny screens, smaller font */
+  .meta-row {
+    gap: .5rem .9rem;
+    font-size: .6rem;
+    letter-spacing: .1em;
+    margin-bottom: 2.2rem;
+    padding-bottom: 1.4rem;
+  }
+
+  /* Doc sections: tighter padding, smaller side accent */
+  .doc { gap: 1.4rem; }
+  .doc-section {
+    padding: 1.5rem 1.2rem;
+    border-radius: 11px;
+  }
+  .doc-section::before {
+    top: 1.5rem;
+    height: 22px;
+    width: 2px;
+  }
+  .doc-num {
+    font-size: .58rem;
+    letter-spacing: .15em;
+    margin-bottom: .55rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: .92rem;
+    margin: 1.2rem 0 .55rem;
+  }
+  .doc-section p { font-size: .92rem; }
+
+  ul.doc-list li {
+    padding-left: 1.2rem;
+    font-size: .92rem;
+    margin-bottom: .5rem;
+  }
+  ul.doc-list li::before { font-size: .8rem; }
+
+  .callout {
+    padding: .9rem 1rem;
+    margin: 1rem 0;
+    font-size: .88rem;
+  }
+
+  /* Index cards: single column, smaller */
+  .cards { grid-template-columns: 1fr; gap: 1rem; }
+  .card-link {
+    min-height: auto;
+    padding: 1.6rem 1.4rem;
+  }
+  .card-link h3 { font-size: 1.15rem; line-height: 1.2; }
+  .card-link p { font-size: .85rem; }
+  .card-link .arrow { font-size: .68rem; }
+
+  /* Floating TG: keep only one compact button, bottom-right */
+  .tg-corner {
+    right: .7rem;
+    bottom: .7rem;
+    gap: .35rem;
+    flex-direction: row;
+  }
+  .tg-corner a {
+    font-size: .62rem;
+    padding: .42rem .7rem;
+    letter-spacing: .05em;
+  }
+  .tg-corner a .ico { font-size: .75rem; }
+  /* Hide the channel button, keep bot (the actionable one) */
+  .tg-corner a:first-child { display: none; }
+
+  /* FOOTER: stack & center */
+  footer { padding: 1.8rem 1.1rem 1.4rem; margin-top: 2rem; }
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .9rem;
+  }
+  .footer-inner .left span:not(.logo-dot) { font-size: .78rem; }
+  .footer-inner .right {
+    font-size: .65rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem .9rem;
+  }
+  .footer-inner .right a { margin-left: 0; }
+}
+
+/* Tiny phones */
+@media (max-width: 380px) {
+  .page { padding: 5rem .9rem 6.5rem; }
+  h1 { font-size: 1.55rem; line-height: 1.1; }
+  .doc-section { padding: 1.3rem 1rem; }
+  h2 { font-size: 1.05rem; }
+  .lead { font-size: .88rem; }
+  .tg-corner a { font-size: .58rem; padding: .38rem .6rem; }
+  /* Сокращаем лого на мини-экранах */
+  .logo { font-size: .85rem; letter-spacing: .05em; }
 }
