@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ShadowVPN — Документы</title>
-<meta name="description" content="Правовые документы сервиса ShadowVPN: политика конфиденциальности и пользовательское соглашение.">
+<title>ShadowVPN Docs — Документация</title>
+<meta name="description" content="Официальная документация ShadowVPN: тарифы, подключение, белые списки, решение проблем, приватность и поддержка.">
+<meta name="theme-color" content="#080810">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+<body class="docs-home">
 <div id="cursor"></div>
 
 <div class="bg-wrap">
@@ -21,68 +21,226 @@
   <div class="blob b3"></div>
 </div>
 
-<nav>
-  <a href="index.html" class="logo"><span class="logo-dot"></span>ShadowVPN · Docs</a>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">Документы</a></li>
-    <li><a href="privacy.html">Конфиденциальность</a></li>
-    <li><a href="terms.html">Соглашение</a></li>
-    <li><a href="https://t.me/NetShadowVPN_bot" class="nav-tg" target="_blank" rel="noopener">✈ Bot</a></li>
-  </ul>
+<nav class="docs-topbar">
+  <a href="/" class="logo"><span class="logo-dot"></span>ShadowVPN · Docs</a>
+  <div class="top-actions">
+    <a href="https://status.shadowvpn.io" target="_blank" rel="noopener" class="status-link"><span class="status-pulse"></span>Статус</a>
+    <a href="https://shadowvpn.io" target="_blank" rel="noopener">На сайт ↗</a>
+    <a href="https://t.me/NetShadowVPN_bot" class="nav-tg" target="_blank" rel="noopener">✈ Bot</a>
+  </div>
 </nav>
 
-<main class="page">
+<button class="sidebar-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+<div class="sidebar-backdrop" aria-hidden="true"></div>
 
-  <div class="crumb reveal">Правовые документы</div>
-
-  <h1 class="reveal">
-    <span class="outline">Прозрачно.</span><br>
-    <em>Понятно.</em> Без воды.
-  </h1>
-
-  <p class="lead reveal">
-    Здесь собраны все правовые документы сервиса ShadowVPN. Мы написали их человеческим языком — без юридического тумана, чтобы вы понимали, что именно мы храним, зачем и какие у вас права.
-  </p>
-
-  <div class="meta-row reveal">
-    <span>Домен: docs.shadowvpn.io</span>
-    <span>Версия 2.4</span>
-    <span>Последняя редакция: 04.09.2026</span>
+<aside class="docs-sidebar" aria-label="Навигация по документации">
+  <div class="sidebar-scroll">
+    <div class="sidebar-group">
+      <div class="sidebar-label">Начало</div>
+      <a class="sidebar-link active" href="#start">Обзор</a>
+      <a class="sidebar-link" href="#quick-start">Быстрый старт</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Аккаунт</div>
+      <a class="sidebar-link" href="#plans">Оплата и тарифы</a>
+      <a class="sidebar-link" href="#refunds">Возврат средств</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Подключение</div>
+      <a class="sidebar-link" href="#setup">Настройка</a>
+      <a class="sidebar-link" href="#whitelist">Белые списки</a>
+      <a class="sidebar-link" href="#protocols">Протоколы</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Помощь</div>
+      <a class="sidebar-link" href="#troubleshooting">Решение проблем</a>
+      <a class="sidebar-link" href="#status">Статус сервиса</a>
+      <a class="sidebar-link" href="#support">Поддержка</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Правовые документы</div>
+      <a class="sidebar-link external" href="/privacy/">Конфиденциальность</a>
+      <a class="sidebar-link external" href="/terms/">Соглашение</a>
+    </div>
   </div>
+</aside>
 
-  <div class="cards">
-    <a class="card-link reveal" href="privacy.html">
-      <div class="tag">// 01 — Privacy</div>
-      <h3>Политика<br>конфиденциальности</h3>
-      <p>Какие данные мы собираем, что мы НЕ логируем, как удаляются данные и почему мы никогда не продаём их рекламным сетям.</p>
-      <span class="arrow">Читать &nbsp;→</span>
-    </a>
+<main class="docs-main">
+  <section class="docs-hero" id="start" data-search-title="Обзор документации">
+    <div class="crumb reveal">Официальная документация</div>
+    <h1 class="reveal">Всё о <em>ShadowVPN</em><br><span class="outline">в одном месте.</span></h1>
+    <p class="lead reveal">Подключение, тарифы, белые списки, решение проблем и правила сервиса — коротко, понятно и без лишней воды.</p>
 
-    <a class="card-link reveal" href="terms.html">
-      <div class="tag">// 02 — Terms</div>
-      <h3>Пользовательское<br>соглашение</h3>
-      <p>Правила использования, 7 дней на возврат, защита оплаченной цены, компенсации при серьёзных сбоях и обязанности сторон.</p>
-      <span class="arrow">Читать &nbsp;→</span>
-    </a>
+    <div class="docs-search-wrap reveal">
+      <span class="search-icon">⌕</span>
+      <input id="docs-search" class="docs-search" type="search" placeholder="Поиск по документации..." autocomplete="off" aria-label="Поиск по документации">
+      <kbd>/</kbd>
+    </div>
+    <div id="search-status" class="search-status" aria-live="polite"></div>
+
+    <div class="quick-cards reveal">
+      <a href="#quick-start" class="quick-card"><span class="quick-icon">⚡</span><div><strong>Начать пользоваться</strong><small>Первое подключение за несколько шагов</small></div><span>→</span></a>
+      <a href="#whitelist" class="quick-card"><span class="quick-icon">🌐</span><div><strong>Белые списки</strong><small>LTE-подписка и квоты</small></div><span>→</span></a>
+      <a href="#troubleshooting" class="quick-card"><span class="quick-icon">🔧</span><div><strong>Что-то не работает?</strong><small>Быстрая диагностика</small></div><span>→</span></a>
+      <a href="#refunds" class="quick-card"><span class="quick-icon">↩</span><div><strong>Возврат средств</strong><small>Как запросить возврат</small></div><span>→</span></a>
+    </div>
+  </section>
+
+  <section class="docs-section searchable reveal" id="quick-start" data-search-title="Быстрый старт подключение начать пользоваться">
+    <div class="section-eyebrow">// 01 — Быстрый старт</div>
+    <h2>Подключение за пару минут</h2>
+    <p class="section-intro">После покупки подписки всё необходимое уже доступно в Telegram-боте.</p>
+    <div class="steps-grid">
+      <div class="step-card"><span class="step-num">01</span><h3>Откройте бота</h3><p>Перейдите в <a href="https://t.me/NetShadowVPN_bot" target="_blank" rel="noopener">@NetShadowVPN_bot</a> и откройте раздел «Мои ключи».</p></div>
+      <div class="step-card"><span class="step-num">02</span><h3>Выберите приложение</h3><p>Рекомендуем Happ или V2RayTun. Оба доступны на основных платформах.</p></div>
+      <div class="step-card"><span class="step-num">03</span><h3>Добавьте подписку</h3><p>Нажмите «Инструкция» и следуйте шагам. Для Happ часть подписок можно добавить автоматически.</p></div>
+      <div class="step-card"><span class="step-num">04</span><h3>Выберите сервер</h3><p>Обновите подписку, пропингуйте серверы и подключитесь к подходящей локации.</p></div>
+    </div>
+  </section>
+
+  <section class="docs-section searchable reveal" id="plans" data-search-title="Оплата тарифы Free Пробный Standard Premium СБП карты криптовалюта продление">
+    <div class="section-eyebrow">// 02 — Оплата и тарифы</div>
+    <h2>Выберите подходящий тариф</h2>
+    <p class="section-intro">Все основные условия собраны здесь. Актуальная цена отображается в боте перед оплатой.</p>
+
+    <div class="plans-grid">
+      <article class="plan-card">
+        <div class="plan-top"><span class="plan-name">Free</span><span class="plan-price">0 ₽</span></div>
+        <p>Бесплатно навсегда.</p>
+        <ul class="feature-list"><li>1 устройство</li><li>Базовые серверы</li><li>Лимиты по скорости и трафику</li></ul>
+      </article>
+      <article class="plan-card">
+        <div class="plan-top"><span class="plan-name">Пробный</span><span class="plan-price">10 ₽ <small>/ 7 дней</small></span></div>
+        <p>Для проверки сервиса и обхода белых списков.</p>
+        <ul class="feature-list"><li>50 ГБ по Wi-Fi</li><li>1 ГБ по LTE</li><li>Обход белого списка</li><li>Торренты запрещены</li></ul>
+      </article>
+      <article class="plan-card featured">
+        <span class="plan-badge">Популярный</span>
+        <div class="plan-top"><span class="plan-name">Standard</span><span class="plan-price">3 устройства</span></div>
+        <p>Оптимальный вариант для постоянного использования.</p>
+        <ul class="feature-list"><li>Безлимитный Wi-Fi трафик</li><li>Обход белых списков</li><li>LTE: 30 ГБ / месяц</li><li>Можно докупить LTE-трафик</li></ul>
+      </article>
+      <article class="plan-card">
+        <div class="plan-top"><span class="plan-name">Premium</span><span class="plan-price">6 устройств</span></div>
+        <p>Максимальные лимиты для активного использования.</p>
+        <ul class="feature-list"><li>Безлимитный Wi-Fi трафик</li><li>LTE: 30 ГБ / день</li><li>Расширение до 75 ГБ / день</li></ul>
+      </article>
+    </div>
+
+    <div class="info-grid two-col">
+      <div class="info-card"><div class="info-tag">Оплата</div><h3>Доступные способы</h3><ul class="doc-list"><li>СБП</li><li>Карточный эквайринг РФ</li><li>Международный эквайринг VISA / Mastercard</li><li>Криптовалюта</li></ul></div>
+      <div class="info-card"><div class="info-tag">Продление</div><h3>Как продлить подписку</h3><ol class="number-list"><li>Профиль → «Продлить подписку»</li><li>Выберите тариф и период</li><li>Оплатите заказ</li></ol><p>После подтверждения платежа ключ продлевается автоматически.</p></div>
+    </div>
+  </section>
+
+  <section class="docs-section searchable reveal" id="refunds" data-search-title="Возврат средств возвратить деньги refund 7 дней не понравился">
+    <div class="section-eyebrow">// 03 — Возврат средств</div>
+    <h2>Сервис не подошёл? Можно запросить возврат</h2>
+    <p class="section-intro">Для запроса не обязательно ждать технической неисправности: если вы решили отказаться от ShadowVPN, оформите обращение в поддержку.</p>
+    <div class="callout accent-callout">
+      <span class="callout-tag">// Условия</span>
+      <p>Запрос на возврат можно подать <strong>в течение 7 календарных дней с момента оплаты</strong>. Причину можно указать для обратной связи, но техническая неисправность сервиса не является обязательным условием.</p>
+    </div>
+    <div class="info-grid two-col">
+      <div class="info-card"><h3>Как запросить</h3><ol class="number-list"><li>Откройте поддержку</li><li>Укажите аккаунт и соответствующую оплату</li><li>Отправьте запрос на возврат</li></ol></div>
+      <div class="info-card"><h3>Срок обработки</h3><p>Заявка рассматривается поддержкой. Фактический срок зачисления зависит от способа оплаты и платёжного провайдера.</p><a class="text-link" href="/terms/#refunds">Полные условия в соглашении →</a></div>
+    </div>
+  </section>
+
+  <section class="docs-section searchable reveal" id="setup" data-search-title="Настройка подключение приложения Happ V2RayTun iOS Android Windows macOS Linux инструкция ключи">
+    <div class="section-eyebrow">// 04 — Настройка и подключение</div>
+    <h2>Рекомендуемые приложения</h2>
+    <p class="section-intro">Для повседневного использования рекомендуем Happ и V2RayTun — они поддерживают основные платформы и функции ShadowVPN.</p>
+    <div class="platform-row"><span>iOS</span><span>Android</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+    <div class="info-grid two-col">
+      <div class="info-card"><div class="info-tag">Обычная подписка</div><h3>Мои ключи → Инструкция</h3><p>В боте откройте «Мои ключи» и нажмите «Инструкция». Там находится актуальный способ подключения для выбранной платформы.</p></div>
+      <div class="info-card"><div class="info-tag">Happ</div><h3>Автоматическое добавление</h3><p>В разделе «Белые списки» доступна кнопка «Добавить в Happ». Подписка будет передана приложению без ручного копирования ссылки.</p></div>
+    </div>
+  </section>
+
+  <section class="docs-section searchable reveal" id="whitelist" data-search-title="Белые списки LTE обход белого списка квоты Standard Premium 30 ГБ 75 ГБ операторы Крым">
+    <div class="section-eyebrow">// 05 — Обход белого списка</div>
+    <h2>Отдельная подписка для региональных ограничений</h2>
+    <p class="section-intro">Используйте её только там, где обычное интернет-соединение или VPN ограничено режимом белых списков.</p>
+    <div class="path-box"><span>Мои ключи</span><b>→</b><span>⚡ Белые списки</span><b>→</b><span>Подключить Happ / Скопировать ссылку</span></div>
+    <div class="info-grid two-col">
+      <div class="info-card"><h3>Как это работает</h3><p>Российские приложения и сервисы из белых списков направляются напрямую, минуя VPN. Остальной трафик проходит через сервер ShadowVPN. Это уменьшает лишнюю нагрузку и расход квоты.</p></div>
+      <div class="info-card"><h3>Квоты</h3><ul class="doc-list"><li><strong>Standard</strong> — 30 ГБ / месяц, можно докупить трафик</li><li><strong>Premium</strong> — 30 ГБ / день, расширение до 75 ГБ / день</li></ul></div>
+    </div>
+    <div class="callout"><span class="callout-tag">// Рекомендация</span><p>Если белые списки в вашем регионе не введены и обычная Wi-Fi подписка работает нормально — используйте именно её. LTE-обход не предназначен для постоянного использования без необходимости.</p></div>
+    <h3 class="subheading">Почему обход может не работать?</h3>
+    <ul class="doc-list wide-list"><li>Не все клиенты поддерживают нужный режим — рекомендуются Happ и V2RayTun.</li><li>Поведение может отличаться у разных операторов и в разных регионах.</li><li>Не все серверы доступны у каждого оператора — обновите подписку, пропингуйте список и выберите доступный.</li></ul>
+  </section>
+
+  <section class="docs-section searchable reveal" id="protocols" data-search-title="Протоколы vless tcp reality xhttp grpc hysteria tls trojan">
+    <div class="section-eyebrow">// 06 — Протоколы</div>
+    <h2>Несколько транспортов для разных сетей</h2>
+    <p class="section-intro">На разных провайдерах один и тот же протокол может показывать разную скорость и стабильность.</p>
+    <div class="protocol-grid">
+      <span>VLESS · TCP · Reality</span>
+      <span>VLESS · XHTTP · Reality</span>
+      <span>VLESS · gRPC · Reality</span>
+      <span>Hysteria · TLS</span>
+      <span>Trojan · TCP · TLS</span>
+    </div>
+    <p class="muted-note">Если соединение нестабильно, сначала смените сервер, затем попробуйте другой доступный протокол.</p>
+  </section>
+
+  <section class="docs-section searchable reveal" id="troubleshooting" data-search-title="Технические проблемы не подключается медленная скорость 502 сервер нода недоступна ping обновить подписку перевыпустить ключи">
+    <div class="section-eyebrow">// 07 — Решение проблем</div>
+    <h2>Проверьте базовые шаги</h2>
+    <div class="trouble-grid">
+      <article class="trouble-card">
+        <span class="trouble-icon">⛓</span><h3>Не подключается</h3>
+        <ol class="number-list"><li>Перевыпустите ключи в боте, особенно при ошибке 502 во время добавления подписки.</li><li>Обновите подписку в клиенте.</li><li>Пропингуйте серверы.</li><li>Подключитесь к доступной локации с меньшей задержкой.</li></ol>
+      </article>
+      <article class="trouble-card">
+        <span class="trouble-icon">↯</span><h3>Медленная скорость</h3>
+        <ul class="doc-list"><li>Смените сервер.</li><li>Выберите локацию с меньшим ping.</li><li>Попробуйте другой протокол подключения.</li><li>Сравните результат на Wi-Fi и мобильной сети.</li></ul>
+      </article>
+      <article class="trouble-card">
+        <span class="trouble-icon">◌</span><h3>Сервер недоступен</h3>
+        <ul class="doc-list"><li>Обновите подписку.</li><li>Попробуйте другой сервер.</li><li>Проверьте страницу статуса.</li><li>Посмотрите объявления о работах в Telegram-канале.</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="docs-section searchable reveal" id="status" data-search-title="Статус сервис серверы панель сбои работы status shadowvpn">
+    <div class="section-eyebrow">// 08 — Статус сервиса</div>
+    <div class="status-panel">
+      <div><span class="status-pulse large"></span></div>
+      <div><h2>status.shadowvpn.io</h2><p>Актуальное состояние серверов, панели, плановые работы и информация об инцидентах.</p></div>
+      <a class="primary-btn" href="https://status.shadowvpn.io" target="_blank" rel="noopener">Открыть статус ↗</a>
+    </div>
+  </section>
+
+  <section class="docs-section searchable reveal" id="privacy" data-search-title="Приватность конфиденциальность данные логи no logs privacy">
+    <div class="section-eyebrow">// 09 — Приватность</div>
+    <h2>Отдельная политика конфиденциальности</h2>
+    <p class="section-intro">Что ShadowVPN собирает, чего не логирует, как используются технические идентификаторы и как обрабатываются данные — описано в отдельном документе.</p>
+    <a class="doc-link-card" href="/privacy/"><span><small>Правовой документ</small><strong>Политика конфиденциальности</strong></span><b>→</b></a>
+  </section>
+
+  <section class="docs-section searchable reveal" id="support" data-search-title="Поддержка связаться Telegram бот время 10 20 МСК новости канал">
+    <div class="section-eyebrow">// 10 — Поддержка</div>
+    <h2>Связь только через официальные каналы</h2>
+    <p class="section-intro">Поддержка отвечает в рабочее время. Для технической проблемы опишите устройство, приложение, сервер и текст ошибки — так обращение получится обработать быстрее.</p>
+    <div class="support-grid">
+      <a class="support-card primary" href="https://t.me/ShadowVpnSupport_bot" target="_blank" rel="noopener"><span>💬</span><div><small>Поддержка</small><strong>@ShadowVpnSupport_bot</strong><p>10:00–20:00 МСК</p></div><b>↗</b></a>
+      <a class="support-card" href="https://t.me/ShadowVpn_net" target="_blank" rel="noopener"><span>📢</span><div><small>Новости и сбои</small><strong>@ShadowVpn_net</strong><p>Обновления сервиса</p></div><b>↗</b></a>
+      <a class="support-card" href="https://t.me/NetShadowVPN_bot" target="_blank" rel="noopener"><span>🤖</span><div><small>Управление</small><strong>@NetShadowVPN_bot</strong><p>Подписка и ключи</p></div><b>↗</b></a>
+    </div>
+  </section>
+
+  <div class="no-results" id="no-results" hidden>
+    <span>⌕</span><h2>Ничего не найдено</h2><p>Попробуйте изменить запрос или воспользуйтесь меню слева.</p>
   </div>
-
 </main>
 
-<div class="tg-corner">
-  <a href="https://t.me/ShadowVpn_net" target="_blank" rel="noopener"><span class="ico">📢</span> @ShadowVpn_net</a>
-  <a href="https://t.me/NetShadowVPN_bot" target="_blank" rel="noopener"><span class="ico">🤖</span> @NetShadowVPN_bot</a>
-</div>
-
-<footer>
+<footer class="docs-footer">
   <div class="footer-inner">
-    <div class="left">
-      <span class="logo-dot"></span>
-      <span>© <span data-year>2025</span> ShadowVPN. Все права защищены.</span>
-    </div>
-    <div class="right">
-      <a href="https://t.me/ShadowVpn_net" target="_blank" rel="noopener">Канал</a>
-      <a href="https://t.me/NetShadowVPN_bot" target="_blank" rel="noopener">Бот</a>
-    </div>
+    <div class="left"><span class="logo-dot"></span><span>© <span data-year>2026</span> ShadowVPN · ShadowNet Group</span></div>
+    <div class="right"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://shadowvpn.io" target="_blank" rel="noopener">shadowvpn.io</a></div>
   </div>
 </footer>
 
